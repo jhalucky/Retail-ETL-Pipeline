@@ -1,4 +1,4 @@
-def validate_schema(df, expected_columns):
+def validate_schema(df, expected_columns): #same schema validation function can be used for all other files schema validation checking 
 
     """
     Validate whether dataframe has the exact expected schema or not.
