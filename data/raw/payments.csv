@@ -1,1 +1,13 @@
 payment_id,order_id,payment_method,payment_status,payment_date
+1001,101,Credit Card,Success,2025-02-01
+1002,102,UPI,Success,2025-02-03
+1003,103,Debit Card,Pending,2025-02-05
+1004,104,Cash on Delivery,Success,2025-02-07
+1005,105,Net Banking,Refunded,2025-02-10
+1006,106,UPI,Success,2025-02-12
+1007,107,Credit Card,Success,2025-02-14
+1008,108,Pending,2025-02-15
+1009,109,Cash on Delivery,Success,2025-02-17
+1010,110,UPI,Success,2025-02-20
+1011,111,Credit Card,Pending,2025-02-21
+1012,112,UPI,Success,2025-02-22

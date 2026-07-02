@@ -1,9 +1,9 @@
 customer_id,first_name,last_name,gender,email,phone,address,city,state,signup_date
 1,Lucky,Jha,Male,lucky@email.com,9876543210,Laxmi Nagar,Delhi,Delhi,2025-01-10
 2,Rahul,Sharma,Male,rahul@email.com,9876543211,Vaishali,Jaipur,Rajasthan,2025-01-12
-3,Priya,Singh,Female,priya@email.com,9876543212,Sector 62,Noida,Uttar Pradesh,2025-01-15
-4,Ankit,Verma,Male,ankit@email.com,9876543213,MG Road,Bengaluru,Karnataka,2025-01-20
-5,Neha,Gupta,Female,neha@email.com,9876543214,Baner,Pune,Maharashtra,2025-01-25
+3,Priya,Singh,Female,9876543212,Sector 62,Noida,Uttar Pradesh,2025-01-15
+4,Ankit  ,Verma  ,Male  ,ankit@email.com,9876543213,MG Road,Bengaluru,Karnataka,2025-01-20
+5,Neha,Gupta,Female,neha@email.com,9876543213,Baner,Pune,Maharashtra,2025-01-25
 6,Aman,Kumar,Male,aman@email.com,9876543215,Dwarka,Delhi,Delhi,2025-02-01
 7,Sneha,Patel,Female,sneha@email.com,9876543216,Navrangpura,Ahmedabad,Gujarat,2025-02-05
 8,Rohit,Yadav,Male,rohit@email.com,9876543217,Gomti Nagar,Lucknow,Uttar Pradesh,2025-02-08

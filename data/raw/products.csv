@@ -1,1 +1,11 @@
 product_id,product_name,category,brand,price,stock_quantity
+1,Laptop,Electronics,Dell,65000,20
+2,Wireless Mouse,Electronics,Logitech,1200,100
+3,Mechanical Keyboard,Electronics,Redragon,3500,50
+4,Office Chair,Furniture,Green Soul,8500,30
+5,Monitor 24 inch,Electronics,LG,14000,25
+6,Water Bottle,Home,Milton,-500,200
+7,Running Shoes,Fashion,Nike,5500,40
+8,Backpack,Fashion,Wildcraft,-2200,60
+9,Smartphone,Electronics,Samsung,30000,35
+10,Notebook,Stationery,Classmate,100,
