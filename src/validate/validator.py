@@ -19,3 +19,14 @@ def validate_duplicate_rows(df):
     print(duplicate_rows)
 
     return duplicate_rows
+
+
+def validate_duplicate_primary_keys(df, primary_key_columns):
+    """Validate for duplicate primary keys in the DataFrame."""
+    
+    duplicate_primary_keys = df.duplicated(subset=primary_key_columns).sum()
+
+    print("\nDuplicate primary keys:")
+    print(duplicate_primary_keys)
+
+    return duplicate_primary_keys
