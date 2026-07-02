@@ -3,7 +3,22 @@ from src.validate.duplicates import validate_duplicate_rows, validate_duplicate_
 from src.validate.emails import validate_emails
 from src.validate.missing import validate_missing_values
 from src.validate.phone import validate_phone_numbers
+from src.validate.schema import validate_schema
 customers_df =  read_csv('data/raw/customers.csv')
+CUSTOMER_SCHEMA = [
+    "customer_id",
+    "first_name",
+    "last_name",
+    "gender",
+    "email",
+    "phone",
+    "address",
+    "city",
+    "state",
+    "signup_date"
+]
+
+validate_schema(customers_df, CUSTOMER_SCHEMA)
 
 validate_missing_values(customers_df)
 validate_duplicate_rows(customers_df)
