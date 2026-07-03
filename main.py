@@ -10,8 +10,9 @@ from src.tranform.convert_dtypes import convert_dtypes
 from src.tranform.save_cleaned import save_cleaned
 # from src.tranform.phone import phone
 from src.load.load_customers import load_customers
-# from src.load.load_orders import load_orders
+from src.load.load_orders import load_orders
 from src.load.load_products import load_products
+from src.load.load_order_items import load_order_items
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -67,12 +68,13 @@ CUSTOMER_SCHEMA = [
 # print(payments_df)
 
 
-validate_missing_values(orders_df)
-validate_duplicate_rows(orders_df)
-validate_duplicate_primary_keys(orders_df, 'order_id')
-convert_dtypes(orders_df)
-save_cleaned(orders_df, 'data/cleaned/orders.csv')
-print(orders_df)
+# validate_missing_values(orders_df)
+# validate_duplicate_rows(orders_df)
+# validate_duplicate_primary_keys(orders_df, 'order_id')
+# convert_dtypes(orders_df)
+# save_cleaned(orders_df, 'data/cleaned/orders.csv')
+# print(orders_df)
+# load_orders(orders_df)
 
 # validate_missing_values(products_df)
 # validate_duplicate_rows(products_df)
@@ -83,3 +85,12 @@ print(orders_df)
 # save_cleaned(products_df, 'data/cleaned/products.csv')
 # print(products_df.dtypes)
 # load_products(products_df)
+
+validate_missing_values(order_items_df)
+validate_duplicate_rows(order_items_df)
+validate_duplicate_primary_keys(order_items_df, 'order_item_id')
+convert_dtypes(order_items_df)
+trim_whitespace(order_items_df)
+save_cleaned(order_items_df, 'data/cleaned/order_items.csv')
+print(order_items_df)
+load_order_items(order_items_df)

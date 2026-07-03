@@ -10,15 +10,15 @@ def load_orders(df):
     for row in df.itertuples(index=False):
 
         cursor.execute(
-            """ INSERT INTO orders (order_id, customer_id, order_date, payment_method, order_status)
-                VALUES (%s, %s, %s, %s, %s)"""
+            """ INSERT INTO orders (order_id, customer_id, order_date, order_status, total_amount)
+                VALUES (%s, %s, %s, %s, %s)""",
 
                 (
                     row.order_id,
                     row.customer_id,
                     row.order_date,
-                    row.payment_method,
-                    row.order_status
+                    row.order_status,
+                    row.total_amount
                 )
         )
 
