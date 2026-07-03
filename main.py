@@ -8,7 +8,8 @@ from src.tranform.standardize_case import standardize_case
 from src.tranform.trim_whitespace import trim_whitespace
 from src.tranform.convert_dtypes import convert_dtypes
 from src.tranform.save_cleaned import save_cleaned
-from src.tranform.phone import phone
+# from src.tranform.phone import phone
+from src.load.load_customers import load_customers
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -43,14 +44,16 @@ validate_phone_numbers(customers_df, 'phone')
 trim_whitespace(customers_df)
 standardize_case(customers_df)
 convert_dtypes(customers_df)
-
-phone(customers_df)
+# phone(customers_df)  #will make an update in version 2.0 to make it more robust and handle different phone number formats, including international numbers.
 print(customers_df.dtypes)
 save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
-print("\nCleaned Customers DataFrame:")
-print(customers_df)
+cleaned_customers_df = read_csv('data/cleaned/customers.csv')
 
+print("\nCleaned Customers DataFrame:")
+print(cleaned_customers_df)
+
+load_customers(cleaned_customers_df)
 # print(customers_df)
 
 # trim_whitespace(products_df)
