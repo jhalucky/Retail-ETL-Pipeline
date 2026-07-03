@@ -13,7 +13,7 @@ from src.load.load_customers import load_customers
 from src.load.load_orders import load_orders
 from src.load.load_products import load_products
 from src.load.load_order_items import load_order_items
-
+from src.load.load_payments import load_payments
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
 products_df = read_csv('data/raw/products.csv')
@@ -51,7 +51,6 @@ CUSTOMER_SCHEMA = [
 # print(customers_df.dtypes)
 # save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
-# cleaned_customers_df = read_csv('data/cleaned/customers.csv')
 
 # print("\nCleaned Customers DataFrame:")
 # print(cleaned_customers_df)
@@ -74,7 +73,7 @@ CUSTOMER_SCHEMA = [
 # convert_dtypes(orders_df)
 # save_cleaned(orders_df, 'data/cleaned/orders.csv')
 # print(orders_df)
-# load_orders(orders_df)
+# # load_orders(orders_df)
 
 # validate_missing_values(products_df)
 # validate_duplicate_rows(products_df)
@@ -84,13 +83,24 @@ CUSTOMER_SCHEMA = [
 # print(products_df.dtypes)
 # save_cleaned(products_df, 'data/cleaned/products.csv')
 # print(products_df.dtypes)
-# load_products(products_df)
+# # load_products(products_df)
 
-validate_missing_values(order_items_df)
-validate_duplicate_rows(order_items_df)
-validate_duplicate_primary_keys(order_items_df, 'order_item_id')
-convert_dtypes(order_items_df)
-trim_whitespace(order_items_df)
-save_cleaned(order_items_df, 'data/cleaned/order_items.csv')
-print(order_items_df)
+# validate_missing_values(order_items_df)
+# validate_duplicate_rows(order_items_df)
+# validate_duplicate_primary_keys(order_items_df, 'order_item_id')
+# convert_dtypes(order_items_df)
+# trim_whitespace(order_items_df)
+# save_cleaned(order_items_df, 'data/cleaned/order_items.csv')
+# print(order_items_df)
+# # load_order_items(order_items_df)
+
+# validate_missing_values(payments_df)
+# save_cleaned(payments_df, 'data/cleaned/payments.csv')
+# # load_payments(payments_df)
+# print(payments_df.dtypes)
+
+load_customers(customers_df)
+load_products(products_df)
+load_orders(orders_df)
 load_order_items(order_items_df)
+load_payments(payments_df)
