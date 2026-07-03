@@ -1,0 +1,13 @@
+order_id,customer_id,order_date,order_status,total_amount
+101,1,2025-02-01,Done,66200
+102,2,2025-02-03,Delivered,3500
+103,3,2025-02-05,Pending,14500
+104,1,2025-02-07,Delivered,500
+105,4,2025-02-10,Cancelled,30000
+106,5,2025-02-12,Delivered,7700
+107,6,2025-02-14,Delivered,100
+108,7,2025-02-15,Pending,2200
+109,8,2025-02-17,Delivered,8500
+110,9,2025-02-20,Delivered,1200
+111,10,2025-02-21,Processing,65000
+112,2,2025-02-22,Delivered,5500

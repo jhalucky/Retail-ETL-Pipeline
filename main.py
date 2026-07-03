@@ -29,18 +29,20 @@ CUSTOMER_SCHEMA = [
     "signup_date"
 ]
 
+# ========== Function Calls ==========
+
 # validate_schema(customers_df, CUSTOMER_SCHEMA)
 # print(customers_df)
 
-validate_missing_values(customers_df)
-validate_duplicate_rows(customers_df)
-validate_duplicate_primary_keys(customers_df, 'customer_id')
-validate_emails(customers_df, 'email')
-validate_phone_numbers(customers_df, 'phone')
-trim_whitespace(customers_df)
-standardize_case(customers_df)
-convert_dtypes(customers_df)
-save_cleaned(customers_df, 'data/cleaned/customers.csv')
+# validate_missing_values(customers_df)
+# validate_duplicate_rows(customers_df)
+# validate_duplicate_primary_keys(customers_df, 'customer_id')
+# validate_emails(customers_df, 'email')
+# validate_phone_numbers(customers_df, 'phone')
+# trim_whitespace(customers_df)
+# standardize_case(customers_df)
+# convert_dtypes(customers_df)
+# save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
 # print(customers_df)
 
@@ -52,5 +54,6 @@ save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
 # print(payments_df)
 
-# convert_dtypes(orders_df)
+convert_dtypes(orders_df)
+save_cleaned(orders_df, 'data/cleaned/orders.csv')
 # print(orders_df)
