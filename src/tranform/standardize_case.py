@@ -9,6 +9,6 @@ def standardize_case(df):
     for column in df.select_dtypes(include="object").columns:
         df[column] = df[column].str.title()
 
-        print("\nStandardized case for column:")
+    print("\nStandardized case for column:")
 
     return df
