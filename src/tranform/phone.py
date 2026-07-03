@@ -8,6 +8,6 @@ def phone(df):
     
     if "phone" in df.columns:
         df["phone"] = df["phone"].astype(str).str.replace(r'\D', '', regex=True)  # Remove non-digit characters
-        df["phone"] = df["phone"].str.zfill(10)  # Pad with leading zeros to ensure 10 digits
+        df["phone"] = df["phone"].apply(lambda x: x if len(x) == 10 else "Invalid")  # Pad with leading zeros to ensure 10 digits
 
     return df
