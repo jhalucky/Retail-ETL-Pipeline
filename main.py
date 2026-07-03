@@ -8,6 +8,7 @@ from src.tranform.standardize_case import standardize_case
 from src.tranform.trim_whitespace import trim_whitespace
 from src.tranform.convert_dtypes import convert_dtypes
 from src.tranform.save_cleaned import save_cleaned
+from src.tranform.phone import phone
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -32,17 +33,23 @@ CUSTOMER_SCHEMA = [
 # ========== Function Calls ==========
 
 # validate_schema(customers_df, CUSTOMER_SCHEMA)
-# print(customers_df)
+# print(customers_df.dtypes)
 
-# validate_missing_values(customers_df)
-# validate_duplicate_rows(customers_df)
-# validate_duplicate_primary_keys(customers_df, 'customer_id')
-# validate_emails(customers_df, 'email')
-# validate_phone_numbers(customers_df, 'phone')
-# trim_whitespace(customers_df)
-# standardize_case(customers_df)
-# convert_dtypes(customers_df)
-# save_cleaned(customers_df, 'data/cleaned/customers.csv')
+validate_missing_values(customers_df)
+validate_duplicate_rows(customers_df)
+validate_duplicate_primary_keys(customers_df, 'customer_id')
+validate_emails(customers_df, 'email')
+validate_phone_numbers(customers_df, 'phone')
+trim_whitespace(customers_df)
+standardize_case(customers_df)
+convert_dtypes(customers_df)
+
+phone(customers_df)
+print(customers_df.dtypes)
+save_cleaned(customers_df, 'data/cleaned/customers.csv')
+
+print("\nCleaned Customers DataFrame:")
+print(customers_df)
 
 # print(customers_df)
 
@@ -54,6 +61,6 @@ CUSTOMER_SCHEMA = [
 
 # print(payments_df)
 
-convert_dtypes(orders_df)
-save_cleaned(orders_df, 'data/cleaned/orders.csv')
+# convert_dtypes(orders_df)
+# save_cleaned(orders_df, 'data/cleaned/orders.csv')
 # print(orders_df)

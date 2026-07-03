@@ -18,5 +18,9 @@ def convert_dtypes(df):
     if "payment_date" in df.columns:
         print("\nConverting 'payment_date' to datetime...")
         df["payment_date"] = pd.to_datetime(df["payment_date"], errors="coerce")
+
+    if "phone" in df.columns:
+        print("\nConverting 'phone' to string...")
+        df["phone"] = df["phone"].astype(str)
     
     return df
