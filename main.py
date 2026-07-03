@@ -10,6 +10,8 @@ from src.tranform.convert_dtypes import convert_dtypes
 from src.tranform.save_cleaned import save_cleaned
 # from src.tranform.phone import phone
 from src.load.load_customers import load_customers
+# from src.load.load_orders import load_orders
+from src.load.load_products import load_products
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -36,24 +38,24 @@ CUSTOMER_SCHEMA = [
 # validate_schema(customers_df, CUSTOMER_SCHEMA)
 # print(customers_df.dtypes)
 
-validate_missing_values(customers_df)
-validate_duplicate_rows(customers_df)
-validate_duplicate_primary_keys(customers_df, 'customer_id')
-validate_emails(customers_df, 'email')
-validate_phone_numbers(customers_df, 'phone')
-trim_whitespace(customers_df)
-standardize_case(customers_df)
-convert_dtypes(customers_df)
-# phone(customers_df)  #will make an update in version 2.0 to make it more robust and handle different phone number formats, including international numbers.
-print(customers_df.dtypes)
-save_cleaned(customers_df, 'data/cleaned/customers.csv')
+# validate_missing_values(customers_df)
+# validate_duplicate_rows(customers_df)
+# validate_duplicate_primary_keys(customers_df, 'customer_id')
+# validate_emails(customers_df, 'email')
+# validate_phone_numbers(customers_df, 'phone')
+# trim_whitespace(customers_df)
+# standardize_case(customers_df)
+# convert_dtypes(customers_df)
+# # phone(customers_df)  #will make an update in version 2.0 to make it more robust and handle different phone number formats, including international numbers.
+# print(customers_df.dtypes)
+# save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
-cleaned_customers_df = read_csv('data/cleaned/customers.csv')
+# cleaned_customers_df = read_csv('data/cleaned/customers.csv')
 
-print("\nCleaned Customers DataFrame:")
-print(cleaned_customers_df)
+# print("\nCleaned Customers DataFrame:")
+# print(cleaned_customers_df)
 
-load_customers(cleaned_customers_df)
+# load_customers(cleaned_customers_df)
 # print(customers_df)
 
 # trim_whitespace(products_df)
@@ -67,3 +69,13 @@ load_customers(cleaned_customers_df)
 # convert_dtypes(orders_df)
 # save_cleaned(orders_df, 'data/cleaned/orders.csv')
 # print(orders_df)
+
+validate_missing_values(products_df)
+validate_duplicate_rows(products_df)
+validate_duplicate_primary_keys(products_df, 'product_id')
+trim_whitespace(products_df)
+convert_dtypes(products_df)
+print(products_df.dtypes)
+save_cleaned(products_df, 'data/cleaned/products.csv')
+print(products_df.dtypes)
+load_products(products_df)
