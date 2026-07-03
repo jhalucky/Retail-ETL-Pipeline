@@ -6,6 +6,7 @@ from src.validate.phone import validate_phone_numbers
 from src.validate.schema import validate_schema
 from src.tranform.standardize_case import standardize_case
 from src.tranform.trim_whitespace import trim_whitespace
+from src.tranform.convert_dtypes import convert_dtypes
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -35,10 +36,20 @@ CUSTOMER_SCHEMA = [
 # validate_duplicate_primary_keys(customers_df, 'customer_id')
 # validate_emails(customers_df, 'email')
 # validate_phone_numbers(customers_df, 'phone')
-trim_whitespace(customers_df)
-standardize_case(customers_df)
-print(customers_df)
+# trim_whitespace(customers_df)
+# standardize_case(customers_df)
+convert_dtypes(customers_df)
+print(customers_df.dtypes)
+# print(customers_df)
 
-trim_whitespace(products_df)
-standardize_case(products_df)
-print(products_df)
+# trim_whitespace(products_df)
+# standardize_case(products_df)
+# print(products_df)
+
+convert_dtypes(payments_df)
+print(payments_df.dtypes)
+# print(payments_df)
+
+convert_dtypes(orders_df)
+print(orders_df.dtypes)
+# print(orders_df)
