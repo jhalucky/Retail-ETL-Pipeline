@@ -4,8 +4,8 @@ from src.validate.emails import validate_emails
 from src.validate.missing import validate_missing_values
 from src.validate.phone import validate_phone_numbers
 from src.validate.schema import validate_schema
-from src.tranform.trim_whitespace  import trim_whitespace
-
+from src.tranform.standardize_case import standardize_case
+from src.tranform.trim_whitespace import trim_whitespace
 
 customers_df =  read_csv('data/raw/customers.csv')
 orders_df = read_csv('data/raw/orders.csv')
@@ -28,12 +28,17 @@ CUSTOMER_SCHEMA = [
 ]
 
 # validate_schema(customers_df, CUSTOMER_SCHEMA)
-print(customers_df)
+# print(customers_df)
 
-validate_missing_values(customers_df)
+# validate_missing_values(customers_df)
 # validate_duplicate_rows(customers_df)
 # validate_duplicate_primary_keys(customers_df, 'customer_id')
-validate_emails(customers_df, 'email')
-validate_phone_numbers(customers_df, 'phone')
+# validate_emails(customers_df, 'email')
+# validate_phone_numbers(customers_df, 'phone')
 trim_whitespace(customers_df)
+standardize_case(customers_df)
 print(customers_df)
+
+trim_whitespace(products_df)
+standardize_case(products_df)
+print(products_df)
