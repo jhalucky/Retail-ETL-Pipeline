@@ -42,38 +42,36 @@ CUSTOMER_SCHEMA = [
 validate_missing_values(customers_df)
 validate_duplicate_rows(customers_df)
 validate_duplicate_primary_keys(customers_df, 'customer_id')
-# validate_emails(customers_df, 'email')
-# validate_phone_numbers(customers_df, 'phone')
-# trim_whitespace(customers_df)
-# standardize_case(customers_df)
-# convert_dtypes(customers_df)
-# # phone(customers_df)  #will make an update in version 2.0 to make it more robust and handle different phone number formats, including international numbers.
+validate_emails(customers_df, 'email')
+validate_phone_numbers(customers_df, 'phone')
+trim_whitespace(customers_df)
+standardize_case(customers_df)
+convert_dtypes(customers_df)
+# phone(customers_df)  #will make an update in version 2.0 to make it more robust and handle different phone number formats, including international numbers.
 # print(customers_df.dtypes)
-# save_cleaned(customers_df, 'data/cleaned/customers.csv')
+save_cleaned(customers_df, 'data/cleaned/customers.csv')
 
 
-# print("\nCleaned Customers DataFrame:")
-# print(cleaned_customers_df)
+print("\nCleaned Customers DataFrame:")
 
-load_customers(customers_df)
+# load_customers(customers_df)
 # print(customers_df)
 
-# trim_whitespace(products_df)
-# standardize_case(products_df)
-# print(products_df)
-
-# convert_dtypes(payments_df)
-
-# print(payments_df)
+trim_whitespace(products_df)
+standardize_case(products_df)
+print(products_df)
+# load_products(products_df)
 
 
-# validate_missing_values(orders_df)
-# validate_duplicate_rows(orders_df)
-# validate_duplicate_primary_keys(orders_df, 'order_id')
-# convert_dtypes(orders_df)
-# save_cleaned(orders_df, 'data/cleaned/orders.csv')
-# print(orders_df)
-# # load_orders(orders_df)
+
+
+validate_missing_values(orders_df)
+validate_duplicate_rows(orders_df)
+validate_duplicate_primary_keys(orders_df, 'order_id')
+convert_dtypes(orders_df)
+save_cleaned(orders_df, 'data/cleaned/orders.csv')
+print(orders_df)
+# load_orders(orders_df)
 
 # validate_missing_values(products_df)
 # validate_duplicate_rows(products_df)
@@ -94,9 +92,9 @@ load_customers(customers_df)
 # print(order_items_df)
 # # load_order_items(order_items_df)
 
-# validate_missing_values(payments_df)
-# save_cleaned(payments_df, 'data/cleaned/payments.csv')
-# # load_payments(payments_df)
+validate_missing_values(payments_df)
+save_cleaned(payments_df, 'data/cleaned/payments.csv')
+# load_payments(payments_df)
 # print(payments_df.dtypes)
 
 load_customers(customers_df)
