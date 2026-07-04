@@ -50,3 +50,7 @@ CREATE TABLE payments (
 
     FOREIGN KEY(order_id) REFERNCES orders(order_id)
 );
+
+-- #how to create tables
+
+psql -U postgres -d retail_db -f sql/create_tables.sql
