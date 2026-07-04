@@ -39,9 +39,9 @@ CUSTOMER_SCHEMA = [
 # validate_schema(customers_df, CUSTOMER_SCHEMA)
 # print(customers_df.dtypes)
 
-# validate_missing_values(customers_df)
-# validate_duplicate_rows(customers_df)
-# validate_duplicate_primary_keys(customers_df, 'customer_id')
+validate_missing_values(customers_df)
+validate_duplicate_rows(customers_df)
+validate_duplicate_primary_keys(customers_df, 'customer_id')
 # validate_emails(customers_df, 'email')
 # validate_phone_numbers(customers_df, 'phone')
 # trim_whitespace(customers_df)
@@ -55,7 +55,7 @@ CUSTOMER_SCHEMA = [
 # print("\nCleaned Customers DataFrame:")
 # print(cleaned_customers_df)
 
-# load_customers(cleaned_customers_df)
+load_customers(customers_df)
 # print(customers_df)
 
 # trim_whitespace(products_df)

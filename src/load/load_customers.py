@@ -1,4 +1,5 @@
 from src.config.database import get_connection
+from src.config.logger import logger
 
 def load_customers(df):
 
@@ -46,5 +47,6 @@ def load_customers(df):
 
     cursor.close()
     connection.close()
+    logger.info("Customer data loaded successfully into the database.")
 
-    print("Customer data loaded successfully into the database.")
+    # print("Customer data loaded successfully into the database.")
